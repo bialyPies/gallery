@@ -1,0 +1,23 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+    /*background-color: pink;*/
+
+}
+
+.container{
+    max-width: 100%;
+    min-width: 320px;
+
+}
+
+.wrap{                      /*обёртка*/
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto; /*акцентрируем данный блок по середине*/
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /*наш шрифт*/
+    font-size: 16px;
+}

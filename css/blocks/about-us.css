@@ -1,0 +1,68 @@
+﻿.about-us{
+    margin: 120px auto; /*120св и сн авто по бокам, чтобы центрировался*/
+    display: flex;
+    align-items: center;        /*чтобы текст был вертикально по центур*/
+}
+.about-us__img {
+    flex-basis: 43%; /*????????????*/
+    margin-right: 95px;
+    position: relative;         /*чтобы корректно позиционировать лемент затемнения*/
+}
+    .about-us__img::before { /*псевдоэлемент*/ /*затемнение хедера*/
+        content: "";
+        position: absolute; /*позиционируем элемент*/
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block; /*делаем элемент блочным*/
+        background: linear-gradient(to left, rgba(131,0,79,0.19), rgb(183,0,92,0.19));
+        z-index: 1; /*поверх блока*/
+    }
+.about-us__img img{         /*делаем блочным*/
+    display: block;
+    max-width: 100%;
+}
+.about-us__text{
+    flex-basis: calc(100% - 43% - 95px);
+}
+.about-us__text p{
+    font-size: 18px;
+    line-height: 30px;
+    margin: 25px 0;
+    color: #1b1b1b;
+    opacity: 0.7;
+}
+    .about-us__text .about-us__tittle {
+        font-size: 36px;
+        line-height: 42px;
+        opacity: 1;
+        margin-top: 0;
+        margin-bottom: 35px;        /*сложнааа ур6 9, 18 примерно*/
+    }
+    .about-us__button{
+        margin-top:35px;
+    }
+@media (max-width: 980px){
+    .about-us {
+        margin: 60px auto;
+    }
+    .about-us__img{
+        margin-right: 30px;
+    }
+    .about-us__text{
+        flex-basis: calc(100%-43%-30px);
+    }
+}
+@media (max-width: 768px) { /*ширина, при которой картинка уже не смотрится сбоку, поэтому мы переместим ее вверх*/
+    .about-us{
+        flex-direction: column; /*меняем расположение главной оси для флекс-контейнера*/
+    }
+    .about-us__img{
+        margin: 0 0 20px 0;
+        flex-basis: auto; /*убираем базовый размер у элементов*/
+    }
+    .about-us__text {
+        flex-basis: auto;
+    }
+}

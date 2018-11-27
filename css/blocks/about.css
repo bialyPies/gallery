@@ -1,0 +1,85 @@
+﻿.about {
+    margin: 120px auto; /*120св и сн авто по бокам, чтобы центрировался*/
+    display: flex;
+    align-items: center; /*чтобы текст был вертикально по центур*/
+}
+
+.about__img {
+    flex-basis: 43%; /*????????????*/
+    margin-right: 95px;
+    position: relative; /*чтобы корректно позиционировать лемент затемнения*/
+}
+.about__img::before { /*псевдоэлемент*/ /*затемнение хедера*/
+    content: "";
+    position: absolute; /*позиционируем элемент*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block; /*делаем элемент блочным*/
+    background: linear-gradient(to left, rgba(131,0,79,0.1), rgb(183,0,92,0.1));
+    z-index: 1; /*поверх блока*/
+}
+.about__img-right::before {
+    content: "";
+    position: absolute; /*позиционируем элемент*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block; /*делаем элемент блочным*/
+    background: linear-gradient(to left, rgba(131,0,79,0.1), rgb(183,0,92,0.1));
+    z-index: 1; /*поверх блока*/
+}
+.about__img img {
+    width: 50vw;
+    display: block;
+    max-width: 100%;
+}
+.about__img-right {
+    flex-basis: 30%; /*????????????*/
+    margin-right: 95px;
+    position: relative; /*чтобы корректно позиционировать лемент затемнения*/
+}
+.about__img-right img{
+    height: 70vh;
+    width: auto;
+    display: block;
+    max-width: 100%;
+}
+
+
+.about__all-text {
+    display: block;
+}
+.about__all-text p {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 25px 0;
+    color: #1b1b1b;
+    opacity: 0.7;
+}
+
+.about__text {
+    flex-basis: calc(100% - 43% - 95px);
+}
+
+    .about__text p {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 25px 0;
+        color: #1b1b1b;
+        opacity: 0.7;
+    }
+
+.about__text-left {
+    flex-basis: calc(100% - 33%);
+}
+
+    .about__text p {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 25px 0;
+        color: #1b1b1b;
+        opacity: 0.7;
+    }

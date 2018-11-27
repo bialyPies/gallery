@@ -1,0 +1,9 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic');
+
+@import url("core.css");
+@import url("blocks/header.css");
+@import url("blocks/button.css");
+@import url("blocks/about-us.css");
+@import url("blocks/icons.css");
+@import url("blocks/about.css");
+/*1920px*/
