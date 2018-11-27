@@ -1,45 +1,130 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <title>Dalila</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css" />
+
+    <title>Hello, world!</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <header class="wrap header__wrap" style="height: 20vh">
-                <div class="header__top">
-                    <div class="header__logo">
-                        <a href="index.html">Dalila</a>
-                    </div>
-                    <div >
-                        <!--<div class="button header__menu">
-                            <a href="gallery.html">Gallery</a>
-                            <a href="gallery.html">About Dalila</a>
-                        </div>-->
-                        
-                            
-                        <div class="header__menu ">
-                            <div class="button header__button used-now">
-                                <a href="gallery.html">Gallery</a>
-                            </div>
-                            <div class="button header__button">
-                                <a href="about.html">About Dalila</a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header">
+                <header class="wrap header__wrap" style="height: 20vh">
+                    <div class="header__top">
+                        <div class="header__logo">
+                            <a href="index.html">Dalila</a>
+                        </div>
+                        <div>
+                            <div class="header__menu ">
+                                <div class="button header__button used-now">
+                                    <a href="gallery.html">Gallery</a>
+                                </div>
+                                <div class="button header__button">
+                                    <a href="about.html">About Dalila</a>
+                                </div>
                             </div>
                         </div>
-                            
                     </div>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-8 offset-lg-2 ">
+                <div class="slider-for ">
+
+                    <div class="card bg-dark text-white">
+                      <img class="card-img" src="img/atud1.jpg" alt="Card image">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">atud 1</h5>
+                      </div>
+                    </div>
+
+                    <!-- <div><img src="img/atud1.jpg" class="img-fluid"></div> -->
+                    <div><img src="img/atud2.jpg" class="img-fluid"></div>
+                    <div><img src="img/atud3.jpg" class="img-fluid"></div>
                 </div>
-
-            </header>
+                <!-- <i id="arrNext" class="fas fa-arrow-circle-right"></i> -->
+                <div class="slider-nav ">
+                    <div><img src="img/atud1.jpg" class="img-fluid"></div>
+                    <div><img src="img/atud2.jpg" class="img-fluid"></div>
+                    <div><img src="img/atud3.jpg" class="img-fluid"></div>
+                </div>
+            </div>
         </div>
-        <div class="gallery">
-
-        </div>
+        
+        
     </div>
+
+    
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav',
+            arrows: true
+            // nextArrow: arrNext
+        });
+           $('.slider-nav').slick({
+              slidesToShow: 6,
+              slidesToScroll: 1,
+              asNavFor: '.slider-for',
+              dots: true,
+              centerMode: true,
+              focusOnSelect: true
+          });
+
+       });
+   </script>
 
 </body>
 </html>
+
+<!--<div class="container">
+    <div class="header">
+        <header class="wrap header__wrap" style="height: 20vh">
+            <div class="header__top">
+                <div class="header__logo">
+                    <a href="index.html">Dalila</a>
+                </div>
+                <div>
+                    <div class="header__menu ">
+                        <div class="button header__button used-now">
+                            <a href="gallery.html">Gallery</a>
+                        </div>
+                        <div class="button header__button">
+                            <a href="about.html">About Dalila</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>-->
