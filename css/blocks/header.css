@@ -42,6 +42,7 @@
 }
 
 .header__logo a {
+    font-family: 'Fredericka the Great', cursive;
     color: #ffffff;
     font-size: 24px;
     line-height: 30px; /*межстрочный интервал*/
@@ -50,9 +51,10 @@
 }
 
 .header h1{
+    font-family: 'Fredericka the Great', cursive;
     text-align:center;
-    font-size: 54px;
-    line-height: 60px;
+    font-size: 80px;
+    line-height: 90px;
     color: #ffffff;
     font-weight: 400;
     max-width: 970px;
@@ -67,6 +69,8 @@
     .header h1 span {
         font-weight: 700;
     }
+
+
 
     /*_______________MEDIA_________________*/
 

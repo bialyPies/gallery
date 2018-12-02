@@ -2,7 +2,7 @@
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 120px auto 70px;
+    margin: 60px auto 0px;
 }
 .icons__element {
     flex-basis: 20%; /* 350/1170*100 = 30 */
@@ -20,6 +20,9 @@
     margin: 0 auto;
     color: lightpink;
     fill: #00ff21;
+
+    z-index: -1; 
+        pointer-events: none;
 }
     .icons__img a {
         display: block;
@@ -27,7 +30,10 @@
         margin: 0 auto;
         color: lightpink;
         fill: #00ff21;
+
+        z-index: 1;
     }
+
 .icons__element .icons__tittle{
     font-size: 18px;
     letter-spacing: 0.9px;
@@ -38,8 +44,10 @@
     margin-bottom: 15px;
 }
 
-.icons-on object :hover {
-    background-color: red;
+.icons-on a:hover {
+    transform: rotate(180deg);
+    /*background-color: rgba(255, 204, 229, 0.6);*/
+
 }
 
 @media (max-width: 980px){
@@ -48,7 +56,7 @@
 
     }
 }
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .icons__element{
         flex-basis: 48%;
     }
@@ -62,5 +70,5 @@
         flex-basis: auto;
         margin: 10px 0;
     }
-}
+}*/
 

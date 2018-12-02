@@ -1,10 +1,12 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
 
 @import url("core.css");
 @import url("blocks/header.css");
+@import url("blocks/header-min.css");
 @import url("blocks/button.css");
 @import url("blocks/about-us.css");
 @import url("blocks/icons.css");
 @import url("blocks/about.css");
-@import url("blocks/gallery.css");
+@import url("blocks/gallery-v2.css");
 /*1920px*/
