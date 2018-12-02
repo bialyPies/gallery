@@ -1,6 +1,7 @@
 .card-img-overlay{
 	/*bottom: 0;*/
 	top: inherit;
+	background-color: rgba(0,0,0,0.2);
 }
 .slider-for .card {
 	top: initial !important;
