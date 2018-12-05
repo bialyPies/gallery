@@ -3,7 +3,7 @@
 		<title>jquery Json</title>
 	</head>
 	<body>
-		<h1>Read date 18:</h1>
+		<h1>Read date 20:</h1>
 		<div id="text1"></div>
 		<div id="text2"></div>
 		<div id="text3"></div>
@@ -27,8 +27,11 @@
 					success:function(xml){
 						$(xml).find("text1").each(function(){
 							var text=$(this).find("text").text();
-							$("<span></span>").html(text).appendTo("#text1 p");
+							$().html(text).appendTo("#text1 p");
 						})
+						// "<span></span>"
+
+
 						// $(xml).find("text2").each(function(){
 						// 	var text=$(this).find("text").text();
 						// 	$("<p></p>").html(text).appendTo("#text2 ul");
