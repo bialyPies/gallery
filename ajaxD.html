@@ -15,7 +15,7 @@
   crossorigin="anonymous"></script>
 		<script>
 			$(document).ready(function(){
-				// $("#text1").append("<p></p>");
+				$("#text1").append("<p></p>");
 				// $("#text2").append("<p></p>");
 				// $("#text3").append("<ul></ul>");
 				// $("#text4").append("<ul></ul>");
@@ -27,7 +27,7 @@
 					success:function(xml){
 						$(xml).find("text1").each(function(){
 							var text=$(this).find("text").text();
-							$("<p></p>").html(text).appendTo("#text1 p");
+							$("<span></span>").html(text).appendTo("#text1 p");
 						})
 						// $(xml).find("text2").each(function(){
 						// 	var text=$(this).find("text").text();
