@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>example</h1>
+	<div>
+		<b>to: </b> <span id="to" ></span><br>
+		<b>from: </b> <span id="from" ></span><br>
+		<b>message: </b> <span id="message" ></span><br>
+	</div>
+
+	<script type="text/javascript">
+		if(window.XMLHttpRequest){
+			xmlhttp=new XMLHttpRequest();
+		}
+		else{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+		}
+		xmlhttp.open("GET","nick.xml", false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML;
+
+		document.getElementById("to").innerHTML = xmlDoc.getElementByTagName("to")[0].childNodes[0].nodeValue;
+		document.getElementById("from").innerHTML = xmlDoc.getElementByTagName("from")[0].childNodes[0].nodeValue;
+		document.getElementById("message").innerHTML = xmlDoc.getElementByTagName("body")[0].childNodes[0].nodeValue;
+	</script>
+</body>
+</html>
