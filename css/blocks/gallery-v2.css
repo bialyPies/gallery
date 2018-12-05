@@ -3,8 +3,16 @@
             }
             a img{
                     border-radius: .20rem !important;
-                    padding-bottom: 15px;
+                    margin-bottom: 15px;
             }
+            a img:hover{
+                /*-webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);*/
+                /*transform: scale(1.02);*/
+                transform: rotateZ(2deg);
+                /*opacity: 0.9*/
+            }
+
             a.anchorjs-link {
                 color:black;
             }
