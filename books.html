@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>jquery Json</title>
+	</head>
+	<body>
+		<h1>Read date:</h1>
+		<div id="content">
+			
+		</div>
+		<script  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#content").append("<ul></ul>");
+				$.ajax({
+					type:"GET",
+					url:"books.xml",
+					dataType:"xml",
+					success:function(xml){
+						$(xml).find("book").each(function(){
+							var title=$(this).find("title").text();
+							var publish=$(this).find("publisher").text();
+							$("<li></li>").html(title+", "+publish).appendTo("#content ul");
+						})
+					}
+				})
+			});
+		</script>
+	</body>
+</html>
