@@ -13,7 +13,6 @@
 		<script  src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
-		<script src="jquery.js"></script>
 		<script>
 			$(document).ready(function(){
 				$("#text1").append("<ul></ul>");
@@ -22,10 +21,30 @@
 					url:"aboutDali.xml",
 					dataType:"xml",
 					success:function(xml){
+						// $(xml).find("text1").each(function(){
+						// 	var title=$(this).find("title").text();
+						// 	var text=$(this).find("text").text();
+						// 	$("<li></li>").html(title+", "+text).appendTo("#text1 ul");
+						// })
 						$(xml).find("text1").each(function(){
-							var title=$(this).find("title").text();
 							var text=$(this).find("text").text();
-							$("<li></li>").html(title+", "+text).appendTo("#text1 ul");
+							$("<li></li>").html(text).appendTo("#text1 ul");
+						})
+						$(xml).find("text2").each(function(){
+							var text=$(this).find("text").text();
+							$("<li></li>").html(text).appendTo("#text2 ul");
+						})
+						$(xml).find("text3").each(function(){
+							var text=$(this).find("text").text();
+							$("<li></li>").html(text).appendTo("#text3 ul");
+						})
+						$(xml).find("text4").each(function(){
+							var text=$(this).find("text").text();
+							$("<li></li>").html(text).appendTo("#text4 ul");
+						})
+						$(xml).find("text5").each(function(){
+							var text=$(this).find("text").text();
+							$("<li></li>").html(text).appendTo("#text5 ul");
 						})
 					}
 				})
