@@ -1,6 +1,6 @@
              $(document).ready(function(){
                 // console.log("hello");
-                Var table = "<table><tr><td>Мероприятие</td><td>Дата</td><td>Место</td>"
+                var table = "<table><tr><td>Мероприятие</td><td>Дата</td><td>Место</td>"
                 $.ajax({
                     type:"GET",
                     url:"aboutDali2.xml",
