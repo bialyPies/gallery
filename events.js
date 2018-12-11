@@ -12,7 +12,7 @@
                                 var name=event.find("name").text();
                                 var date=event.find("date").text();
                                 var place=event.find("place").text();
-                                $('<tr><td>' + name + '</td><td>' + date + '</td><td>' + place + '</td></tr>').appendTo("table");
+                                $('<tr><td>' + name + '</td><td>' + date + '</td><td>' + place + '</td></tr>').appendTo("tr");
                             //})
                         });
                     }
