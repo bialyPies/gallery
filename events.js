@@ -1,6 +1,6 @@
              $(document).ready(function(){
                 // console.log("hello");
-                $('#here_table').append(  '<table />' );
+                Var table = "<table><tr><td>Мероприятие</td><td>Дата</td><td>Место</td>"
                 $.ajax({
                     type:"GET",
                     url:"aboutDali2.xml",
@@ -14,12 +14,27 @@
                                 var date=event.find("date").text();
                                 var place=event.find("place").text();
                                 // $('<tr><td>' + name + '</td><td>' + date + '</td><td>' + place + '</td></tr>').appendTo("table tr:last");
-                                $('#here_table table').append('<tr><td>' + name + '</td><td>' + date + '</td><td>' + place + '</td></tr>');
+                                //$('#here_table table').append('<tr><td>' + name + '</td><td>' + date + '</td><td>' + place + '</td></tr>');
+                                table +='<tr><td>' + name + '</td><td>' + date + '</td><td>' + place + '</td></tr>';
                             //})
                         });
+                        table += "</table>"
+                        $('#here_table').append(table);
                     }
                 })
              });
+// Var table = “<table><tr>....”
+// Elements.each ...
+// Table += “<tr....>”
+// Table += “</table”
+
+//var table = $('<table>').addClass('foo');
+// for(i=0; i<3; i++){
+//     var row = $('<tr>').addClass('bar').text('result ' + i);
+//     table.append(row);
+// }
+
+// $('#here_table').append(table);
 
 
 // $('#here_table').append('<table></table>');
