@@ -2,11 +2,11 @@
     margin: 120px auto; /*120св и сн авто по бокам, чтобы центрировался*/
     display: flex;
     align-items: center;        /*чтобы текст был вертикально по центур*/ 
-}
+} 
 .about-us__img {
     flex-basis: 43%; /*????????????*/
     margin-right: 95px;
-    position: relative;         /*чтобы корректно позиционировать лемент затемнения*/
+    position: relative;         /*чтобы корректно позиционировать элемент затемнения*/
 }
     .about-us__img::before { /*псевдоэлемент*/ /*затемнение хедера*/
         content: "";

@@ -1,77 +1,17 @@
 .header-min {
-    background: url('../../img/daliHands.jpg') center no-repeat;
-    background-size: cover;
     margin-bottom: 50px;
-    position: relative;
-    width: 100%;
-}
-
-.header-min::before{                /*псевдоэлемент*/ /*затемнение хедера*/
-    content: "";
-    position: absolute;         /*позиционируем элемент*/
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: block;             /*делаем элемент блочным*/
-    background: linear-gradient(to left, rgba(131,0,79,0.19), rgb(183,0,92,0.19));
-    z-index: 1;                 /*поверх блока*/
 }
 
 .header-min__wrap{                  
-    position: relative;
-    z-index: 2;                 /*контент поверх затемнения*/
     height: 120px;             
 }
 
-.header-min__top{
-    display: flex;              /*? в ряд эелементы*/
-    justify-content: space-between; /*выравнивание элементов*/
-    align-items: center;
-    padding: 40px 0;
-}
-/* my own trying*/
 .header-min__menu {
     display: flex; /*? в ряд эелементы*/
     justify-content: flex-end; /*выравнивание элементов*/
     align-items: center;
     
 }
-.header-min__button {
-    display: inline;
-}
-
-.header-min__logo a {
-    font-family: 'Fredericka the Great', cursive;
-    color: #ffffff;
-    font-size: 24px;
-    line-height: 30px; /*межстрочный интервал*/
-    font-weight: 700; /*начертание*/
-    text-decoration: none;
-}
-
-.header-min h1{
-    font-family: 'Fredericka the Great', cursive;
-    text-align:center;
-    font-size: 80px;
-    line-height: 90px;
-    color: #ffffff;
-    font-weight: 400;
-    max-width: 970px;
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    padding: 0 15px;        /*чтобы при адаптации не прижимался в упор*/
-    box-sizing: border-box; /*чтобы поля были включены в ширину*/
-    transform: translate(-50%, -50%);
-}
-    .header-min h1 span {
-        font-weight: 700;
-    }
-
-
-
     /*_______________MEDIA_________________*/
 
     @media (max-width: 980px){
@@ -79,26 +19,3 @@
             margin-bottom: 30px; /*изменение отступа снизу*/
         }
     }
-    @media (max-width: 768px){
-        .header-min h1{
-            font-size: 34px;
-            line-height: 40px;
-        }
-        .used-now {
-            display: none;
-        }
-    }
-@media (max-height: 600px) { /*чтобы при небольшой высоте текст не налазил на лого и кнопку*/
-/*    .header-min__wrap {
-       height: 120px;      
-    }*/
-    .header-min h1{
-        position: static;       /*???*/
-        left: auto;             /*????*/
-        top: auto;
-        transform: translate(0, 0);  /*тк мы возвращали с помощью транслейта, но ПОЧЕМУ СЕЙЧАС 00*/
-        padding-top: 24px;      /*текст теперь все время в центре 24, потому что 126 хедер-топ, а мы от него отступ делаем*/
-        padding-bottom: 150px;      
-    }
-    
-}

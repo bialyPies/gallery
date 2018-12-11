@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-
+﻿<!DOCTYPE html> 
+ 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -9,18 +9,18 @@
 </head>
 <body>
     <div class="my-container">
-        <div class="header-min">
-            <header class="wrap header-min__wrap">
-                <div class="header-min__top">
+        <div class="header header-min">
+            <header class="wrap header__wrap header-min__wrap">
+                <div class="header__top">
                     <div class="header__logo">
                         <a href="index.html">Dalila</a>
                     </div>
                     <div>
                         <div class="header-min__menu ">
-                            <div class="button header-min__button">
+                            <div class="button header__button">
                                 <a href="gallery-v3.html">Gallery</a>
                             </div>
-                            <div class="button header-min__button used-now">
+                            <div class="button header__button used-now">
                                 <a href="about.html">About Dalila</a>
                             </div>
                         </div>
@@ -32,32 +32,21 @@
         
         <div class="wrap about">
             <div class="about__all-text" id="text1">
-               
+               <!-- text -->
             </div>
             <div class="about-us">
                 <div class="about-us__img about-us__img-r">
                     <img src="img/process-red1.png" alt="" />
                 </div>
                 <div class="about-us__text" id="text2">
-                    
+                    <!-- text -->
                 </div>
             </div>
 
             <div class="about-us reverse-element">
                 <div class="about-us__text" id="text4">
-                    
-                        
-
+                    <!-- text -->
                 </div>
-                <!-- <div class="button header-min__button used-now">
-                            <a href="cd_catalog.html">cd</a>
-                        </div>
-                        <div class="button header-min__button used-now">
-                            <a href="books.html">ajax</a>
-                        </div>
-                        <div class="button header-min__button used-now">
-                            <a href="ajaxD.html">ajaxD</a>
-                        </div> -->
                 <div class="about-us__img about-us__img-l">
                     <img src="img/process2-red1.png" alt="" />
                 </div>
@@ -122,8 +111,6 @@
                 $("#text1").append("<div></div>");
                 $("#text2").append("<div></div>");
                 $("#text4").append("<div></div>");
-                // $("#text4").append("<ul></ul>");
-                // $("#text5").append("<ul></ul>");
                 $.ajax({
                     type:"GET",
                     url:"aboutDali.xml",

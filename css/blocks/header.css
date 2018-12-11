@@ -5,7 +5,7 @@
     position: relative;
     width: 100%;
 }
-
+ 
 .header::before{                /*псевдоэлемент*/ /*затемнение хедера*/
     content: "";
     position: absolute;         /*позиционируем элемент*/
@@ -30,7 +30,7 @@
     align-items: center;
     padding: 40px 0;
 }
-/* my own trying*/
+
 .header__menu {
     display: flex; /*? в ряд эелементы*/
     justify-content: flex-end; /*выравнивание элементов*/
