@@ -8,7 +8,7 @@
                         //.find('events')
                         $(xml).find('events').each(function(){
                             //$(this).children().each(function(){
-                                var events = $(this);
+                                var event = $(this);
                                 var name=event.find("name").text();
                                 var date=event.find("date").text();
                                 var place=event.find("place").text();
