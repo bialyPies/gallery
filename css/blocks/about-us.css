@@ -4,7 +4,7 @@
     align-items: center;        /*чтобы текст был вертикально по центур*/ 
 } 
 .about-us__img {
-    flex-basis: 43%; /*????????????*/
+    flex-basis: 43%; 
     margin-right: 95px;
     position: relative;         /*чтобы корректно позиционировать элемент затемнения*/
 }
@@ -30,8 +30,6 @@
     font-size: 18px;
     line-height: 30px;
     margin: 25px 0;
-    /*color: #1b1b1b;
-    opacity: 0.7;*/
 }
     .about-us__text .about-us__tittle {
         font-size: 36px;

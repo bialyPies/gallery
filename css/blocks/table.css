@@ -1,0 +1,38 @@
+table{
+	width: 100%;
+	margin:0 auto;
+	text-align: center;
+}
+tr:first-child{
+	text-align: center;
+	height: 70px;
+    opacity: 1;
+	font-weight: 700;  
+}
+tr:hover{
+	color: #d44d96;
+	text-decoration: underline;
+}
+tr:first-child:hover{
+	color: inherit;
+	text-decoration: none; 
+}
+
+
+@media (max-width: 768px){
+        td{
+            border-bottom: 1px solid pink;
+            border-right: 1px solid pink;
+        }
+        tr:last-child td {
+        	border-bottom: none;
+        }
+        td:last-child {
+        	border-right: none;
+		}
+		tr:first-child td{
+        	border-right: none;
+        	border-bottom: none;
+		}
+    }
+border-bottom: 1px solid #37B5A5;

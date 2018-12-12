@@ -1,50 +1,26 @@
-             $(document).ready(function(){
-                // console.log("hello");
-                var table = "<table><tr><td>Мероприятие</td><td>Дата</td><td>Место</td></tr>";
-                $.ajax({
-                    type:"GET",
-                    url:"aboutDali2.xml",
-                    dataType:"xml",
-                    success:function(xml){
-                        //.find('events')
-                        $(xml).find('events').each(function(){
-                            //$(this).children().each(function(){
-                                var event = $(this);
-                                var name=event.find("name").text();
-                                var date=event.find("date").text();
-                                var place=event.find("place").text();
-                                // $('<tr><td>' + name + '</td><td>' + date + '</td><td>' + place + '</td></tr>').appendTo("table tr:last");
-                                //$('#here_table table').append('<tr><td>' + name + '</td><td>' + date + '</td><td>' + place + '</td></tr>');
-                                table +='<tr><td>' + name + '</td><td>' + date + '</td><td>' + place + '</td></tr>';
-                            //})
-                        });
-                        table += "</table>"
-                        $('#here_table').append(table);
-                    }
-                })
-             });
-// Var table = “<table><tr>....”
-// Elements.each ...
-// Table += “<tr....>”
-// Table += “</table”
+$(document).ready(function(){
+    var table = "<table><tr><td>Мероприятие</td><td>Дата</td><td>Место</td></tr>";
+    $.ajax({
+        type:"GET",
+        url:"https://raw.githubusercontent.com/bialyPies/gallery/master/aboutDali2.xml",
+        dataType:"xml",
+        success:function(xml){
 
-//var table = $('<table>').addClass('foo');
-// for(i=0; i<3; i++){
-//     var row = $('<tr>').addClass('bar').text('result ' + i);
-//     table.append(row);
-// }
+            var events = xml.children[0].children;
 
-// $('#here_table').append(table);
+            $.each(events, function(){
+                var event = $(this);
+                var name=event.find("name").text();
+                var date=event.find("date").text();
+                var place=event.find("place").text();
+                table +='<tr><td>' + name + '</td><td>' + date + '</td><td>' + place + '</td></tr>';
+            })    
+
+            table += "</table>"
+            $('#here_table').append(table);
+        }
+        
+    })
+});
 
 
-// $('#here_table').append('<table></table>');
-// var table = $('#here_table').children();
-//  for(i=0;i<3;i++){
-//     table.append( '<tr><td>' + 'result' +  i + '</td></tr>' );
-// }             
-
-// $('#here_table').append(  '<table />' );
-
-//  for(i=0;i<3;i++){
-//     $('#here_table table').append( '<tr><td>' + 'result' +  i + '</td></tr>' );
-// }
